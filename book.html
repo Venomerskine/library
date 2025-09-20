@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Library</title>
+    <link rel="stylesheet" href="book.css">
+</head>
+<body>
+    <div id="books-container"></div>
+    <button id="New-Book-Button">New Book</button>
+
+    <dialog id="create-book">
+        <form action="">
+            <div class="title">
+                <label for="title">Book Title</label>
+                <input type="text" name="title" id="title" placeholder="Tile" required>
+            </div>
+
+            <div class="author">
+                <label for="author">Book Author</label>
+                <input type="text" name="author" id="author" placeholder="Author" required>
+            </div>
+            <div class="pages">
+                <label for="pages">Number of Pages</label>
+                <input type="number" name="pages" id="pages" placeholder="Pages" required>
+            </div>
+            <div class="read">
+                <legend>Read</legend>
+                <div class="yes">
+                    <label for="yes">Yes</label>
+                    <input type="radio" name="yes" id="yes" required>
+                </div>
+                <div class="no">
+                    <label for="no">No</label>
+                    <input type="radio" name="no" id="no" required>
+                </div>
+            </div>
+
+            <div class="buttons">
+                <button value="cancel" formmethod="dialog">Cancel</button>
+                <button id="confirmBtn" value="default">Confirm</button>
+            </div>
+
+        </form>
+    </dialog>
+
+    <script src="book.js"></script>
+</body>
+</html>
