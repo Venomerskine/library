@@ -10,8 +10,9 @@
     <div id="books-container"></div>
     <button id="New-Book-Button">New Book</button>
 
-    <dialog id="create-book">
-        <form action="">
+    <dialog id="dialog" >
+        <h2>Add New Book</h2>
+        <form action="" id="create-book">
             <div class="title">
                 <label for="title">Book Title</label>
                 <input type="text" name="title" id="title" placeholder="Tile" required>
@@ -28,18 +29,18 @@
             <div class="read">
                 <legend>Read</legend>
                 <div class="yes">
-                    <label for="yes">Yes</label>
-                    <input type="radio" name="yes" id="yes" required>
+                    <label for="read-yes">Yes</label>
+                    <input type="radio" name="read_status" id="read-yes" value="yes" required>
                 </div>
                 <div class="no">
-                    <label for="no">No</label>
-                    <input type="radio" name="no" id="no" required>
+                    <label for="read-no">No</label>
+                    <input type="radio" name="read_status" id="read-no" value="no" required>
                 </div>
             </div>
 
             <div class="buttons">
-                <button value="cancel" formmethod="dialog">Cancel</button>
-                <button id="confirmBtn" value="default">Confirm</button>
+                <button type="button" id="cancel" value="cancel" formmethod="dialog">Cancel</button>
+                <button id="confirmBtn" type="submit">Confirm</button>
             </div>
 
         </form>
