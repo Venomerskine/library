@@ -1,12 +1,22 @@
 const lib = [];
 
-function Book(title, author, pages, read = false) {
-  if (!new.target) throw new Error("Use 'new Book(...)' to construct a Book");
+// function Book(title, author, pages, read = false) {
+//   if (!new.target) throw new Error("Use 'new Book(...)' to construct a Book");
+//   this.id = crypto.randomUUID();
+//   this.title = String(title);
+//   this.author = String(author);
+//   this.pages = Number(pages) || 0;
+//   this.read = Boolean(read);
+// }
+
+class Book {
+  constructor(title, author, pages, read = false ) {
   this.id = crypto.randomUUID();
   this.title = String(title);
   this.author = String(author);
   this.pages = Number(pages) || 0;
   this.read = Boolean(read);
+  }
 }
 
 Book.prototype.info = function () {
